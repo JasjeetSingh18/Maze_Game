@@ -1,24 +1,26 @@
-````markdown
-# Maze Game
+# 🎮 Maze Game
 
-A terminal born maze solver reborn as an SDL2 powered graphical game! Race from **S** (Start) to **E** (Exit), matching the computer’s BFS solution in as few moves as possible.
+[![forthebadge](https://forthebadge.com/images/badges/made-with-c.svg)](http://forthebadge.com)
+[![forthebadge](http://forthebadge.com/images/badges/built-with-love.svg)](http://forthebadge.com)
 
----
+A `terminal-born` maze solver reborn as an `SDL2-powered` graphical game! Race from **S** (Start) to **E** (Exit), matching the computer’s `BFS solution` in as few moves as possible.
 
-## Table of Contents
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/8b780717-cc5b-487c-9373-35479f171c93" width="500">
+</div>
 
+# Table of contents
 1. [Features](#features)  
 2. [Prerequisites](#prerequisites)  
 3. [Installation & Build](#installation--build)  
 4. [Running the Game](#running-the-game)  
 5. [Gameplay](#gameplay)  
-6. [Controls](#controls)  
-7. [Project Structure](#project-structure)  
-8. [License](#license)  
+6. [Controls](#controls)
+7. [License](#license)  
 
 ---
 
-#<a name="features"></a> Features
+# Features
 
 - **Random & Predefined Mazes**  
   Load built-in puzzles or any text-based maze file from `mazes.txt`.  
@@ -33,6 +35,8 @@ A terminal born maze solver reborn as an SDL2 powered graphical game! Race from 
 - **Cross-Platform Builds**  
   One-step `make run` on Linux/macOS or a simple batch script on Windows.
 
+[(Back to top)](#table-of-contents)
+
 ---
 
 ## Prerequisites
@@ -41,6 +45,8 @@ A terminal born maze solver reborn as an SDL2 powered graphical game! Race from 
 - **SDL2** development libraries  
 - **SDL2_ttf** (for rendering on-screen text)  
 - A POSIX-style shell (Linux/macOS) or **MSYS2** on Windows  
+
+[(Back to top)](#table-of-contents)
 
 ---
 
@@ -54,22 +60,17 @@ A terminal born maze solver reborn as an SDL2 powered graphical game! Race from 
    pacman -Syu
    pacman -S base-devel mingw-w64-x86_64-toolchain \
      mingw-w64-x86_64-SDL2 mingw-w64-x86_64-SDL2_ttf
-````
-
-3. Clone & build:
-
+3. Clone & build
    ```bash
    git clone https://github.com/<YOUR_USER>/maze-game.git
    cd maze-game
    make run
    ```
-
-   Or use `build.bat` if you prefer.
+   Or use `build.bat` if you prefer
 
 ### Linux / macOS
 
 1. Install dependencies:
-
    ```bash
    # Debian / Ubuntu
    sudo apt-get update
@@ -77,39 +78,37 @@ A terminal born maze solver reborn as an SDL2 powered graphical game! Race from 
 
    # macOS (Homebrew)
    brew install sdl2 sdl2_ttf
-   ```
 2. Clone & build:
-
    ```bash
    git clone https://github.com/<YOUR_USER>/maze-game.git
    cd maze-game
    make run
-   ```
+   
+[(Back to top)](#table-of-contents)
 
 ---
-
 ## Running the Game
 
 After building, the game launches automatically. To run manually:
-
 ```bash
 ./maze_game      # Linux/macOS
 maze_game.exe    # Windows
 ```
+[(Back to top)](#table-of-contents)
 
 ---
 
 ## Gameplay
+- Objective: Navigate from S (green) to E (green) before your moves run out.
+- Move Limit: You have exactly the same number of moves as the BFS solver’s shortest path.
+- Winning: Reach E with ≥ 0 moves remaining → You win.
+- Losing: Moves drop below zero before reaching <b>E</b> → You lose.
 
-* **Objective:** Navigate from **S** (green) to **E** (green) before your moves run out.
-* **Move Limit:** You have exactly the same number of moves as the BFS solver’s shortest path.
-* **Winning:** Reach **E** with ≥ 0 moves remaining → You win.
-* **Losing:** Moves drop below zero before reaching **E** → You lose.
+[(Back to top)](#table-of-contents)
 
 ---
 
 ## Controls
-
 | Key | Action     |
 | --- | ---------- |
 | W   | Move Up    |
@@ -118,38 +117,13 @@ maze_game.exe    # Windows
 | D   | Move Right |
 | Esc | Quit Game  |
 
----
 
-## Project Structure
-
-```
-maze-game/
-├── assets/
-│   └── OpenSans-Regular.ttf   # On-screen font
-├── src/
-│   ├── main.c                 # SDL2 window & game loop
-│   ├── maze.c/.h              # Maze loader & representation
-│   ├── player.c/.h            # Player movement & state
-│   ├── solver.c/.h            # BFS pathfinding logic
-│   └── BFS_queue.c/.h         # Queue ADT for BFS
-├── mazes.txt                  # Optional maze definitions
-├── Makefile                   # Build & run commands
-├── build.bat                  # Windows build script
-└── README.md                  # ← You are here!
-```
+[(Back to top)](#table-of-contents)
 
 ---
 
 ## License
 
-This project is released under the **MIT License**.
-See [LICENSE](LICENSE) for full details.
+The MIT License (MIT) 2017. Please have a look at the [LICENSE.md](LICENSE.md) for more details.
 
----
-
-Happy maze-solving!
-Found a bug or want a new feature? Open an issue or send a pull request!
-
-```
-```
-
+[(Back to top)](#table-of-contents)
