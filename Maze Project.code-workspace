@@ -1,0 +1,12 @@
+{
+    "folders": [
+		{
+			"path": "."
+		}
+	],
+	"settings": {
+		"files.associations": {
+			"bfs_queue.h": "c"
+		}
+	}
+}
