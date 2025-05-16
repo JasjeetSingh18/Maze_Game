@@ -16,7 +16,6 @@ A `terminal-born` maze solver reborn as an `SDL2-powered` graphical game! Race f
 4. [Running the Game](#running-the-game)  
 5. [Gameplay](#gameplay)  
 6. [Controls](#controls)
-7. [License](#license)  
 
 ---
 
@@ -117,13 +116,5 @@ maze_game.exe    # Windows
 | D   | Move Right |
 | Esc | Quit Game  |
 
-
-[(Back to top)](#table-of-contents)
-
----
-
-## License
-
-The MIT License (MIT) 2017. Please have a look at the [LICENSE.md](LICENSE.md) for more details.
 
 [(Back to top)](#table-of-contents)
